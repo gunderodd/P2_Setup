@@ -1,45 +1,44 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>com</groupId>
-  <artifactId>P2_Tests</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <packaging>war</packaging>
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com</groupId>
+	<artifactId>P2_Tests</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>war</packaging>
   
-     <properties>
-  	<maven.compiler.source>1.8</maven.compiler.source>
-  	<maven.compiler.target>1.8</maven.compiler.target>
-  </properties>
+	<properties>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+	</properties>
   
-  <dependencies>
-  
-  	  <dependency>
+	<dependencies>
+		<dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
             <version>2.10.2</version>
-      </dependency>
+		</dependency>
         
-	<!-- https://mvnrepository.com/artifact/com.oracle.ojdbc/ojdbc8 -->
-	<dependency>
-   	   <groupId>com.oracle.ojdbc</groupId>
-   	   <artifactId>ojdbc8</artifactId>
-   	   <version>19.3.0.0</version>
-	</dependency>
+		<!-- https://mvnrepository.com/artifact/com.oracle.ojdbc/ojdbc8 -->
+		<dependency>
+		   <groupId>com.oracle.ojdbc</groupId>
+		   <artifactId>ojdbc8</artifactId>
+		   <version>19.3.0.0</version>
+		</dependency>
 
-	
-	<!-- https://mvnrepository.com/artifact/junit/junit -->
-	<dependency>
-	    <groupId>junit</groupId>
-	    <artifactId>junit</artifactId>
-	    <version>4.12</version>
-	    <scope>test</scope>
-	</dependency>
-	
-	<!-- https://mvnrepository.com/artifact/log4j/log4j -->
-	<dependency>
-	    <groupId>log4j</groupId>
-	    <artifactId>log4j</artifactId>
-	    <version>1.2.17</version>
-	</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/junit/junit -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+			<scope>test</scope>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/log4j/log4j -->
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.17</version>
+		</dependency>
 
 		<!-- test for stackoverflow idea -->
 		<dependency>
@@ -48,7 +47,35 @@
 		    <version>3.0.1</version>
 		    <scope>provided</scope>
 		</dependency>
-        
-  </dependencies>
-  
+	
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>5.2.4.RELEASE</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-beans</artifactId>
+			<version>5.2.4.RELEASE</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>5.2.4.RELEASE</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-orm</artifactId>
+			<version>5.2.4.RELEASE</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>5.4.10.Final</version>
+		</dependency>
+	</dependencies>
 </project>
