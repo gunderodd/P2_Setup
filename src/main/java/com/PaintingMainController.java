@@ -7,8 +7,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -18,7 +20,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 
 
 @Controller
-@RequestMapping("/api")  //SpringMVC/mvcexample/api
+@RequestMapping("/api")  // P2_Tests_MVC/api ?
 @CrossOrigin(origins = "*") //Dealing with CORS issues
 public class PaintingMainController {
 	
@@ -44,7 +46,20 @@ public class PaintingMainController {
 		return paintingDAO.selectAll();
 	}
 	
+	// Update
+	@PutMapping(value = "/editPaintingDetails")
+	public @ResponseBody String editPaintingDetails(@RequestBody Painting selectedPainting) {
+		System.out.println("we are now in selected painting " + selectedPainting);
+		paintingDAO.editPainting(selectedPainting);
+		return "Painting Updated.";
+	}
 	
+	// Delete
+	@DeleteMapping(value = "/deletePainting")
+	public @ResponseBody String deletePainting(@RequestBody Painting painting) {
+		paintingDAO.delete(painting);
+		return "Planet " + painting.toString() + " deleted";
+	}
 	
 
 }
